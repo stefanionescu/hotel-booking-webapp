@@ -20,6 +20,6 @@ const UserSchema = new Schema({
         type: Boolean,
         default: false
     }
-}, { timestamp: true });
+}, { timestamps: true });
 
 export default mongoose.model("User", UserSchema);

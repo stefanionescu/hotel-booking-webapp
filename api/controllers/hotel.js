@@ -18,7 +18,7 @@ export const updateHotel = async (req, res, next) => {
           await Hotel.findByIdAndUpdate(
             req.params.id,
             { $set: req.body },
-            {new: true}
+            { new: true }
           );
         res.status(200).json(updatedHotel);
     } catch (err) {
@@ -28,10 +28,9 @@ export const updateHotel = async (req, res, next) => {
 
 export const deleteHotel = async (req, res, next) => {
     try {
-        const updatedHotel =
-          await Hotel.findByIdAndDelete(
-            req.params.id
-          );
+        await Hotel.findByIdAndDelete(
+          req.params.id
+        );
         res.status(200).json("Hotel has been deleted.");
     } catch (err) {
         next(err);
