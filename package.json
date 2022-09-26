@@ -1,0 +1,30 @@
+{
+  "name": "hotel-booking-webapp",
+  "version": "1.0.0",
+  "description": "A hotel booking webapp that was built using the MERN stack.",
+  "main": "./api/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanionescu/hotel-booking-webapp.git"
+  },
+  "keywords": [],
+  "author": "Stefan Ionescu @sionescu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanionescu/hotel-booking-webapp/issues"
+  },
+  "homepage": "https://github.com/stefanionescu/hotel-booking-webapp#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20"
+  }
+}
