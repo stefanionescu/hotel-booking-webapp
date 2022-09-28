@@ -1,11 +1,11 @@
 {
-  "name": "hotel-booking-webapp",
+  "name": "hotel-booking-backend",
   "version": "1.0.0",
-  "description": "A hotel booking webapp that was built using the MERN stack.",
-  "main": "./api/index.js",
+  "description": "A hotel booking backend built with MongoDB, Express and Node.",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./api/index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",

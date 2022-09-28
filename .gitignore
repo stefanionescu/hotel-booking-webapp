@@ -1,4 +1,22 @@
 # root
 .env
-node_modules
-package-lock.json
+
+# api
+./api/node_modules
+./api/package-lock.json
+
+# app
+./app/.pnp
+./app/build
+./app/.pnp.js
+./app/coverage
+./app/.DS_Store
+./app/.env.local
+./app/node_modules
+./app/npm-debug.log*
+./app/yarn-debug.log*
+./app/yarn-error.log*
+./app/.env.test.local
+./api/package-lock.json
+./app/.env.production.local
+./app/.env.development.local
