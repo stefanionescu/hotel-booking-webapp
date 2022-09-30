@@ -26,7 +26,7 @@ const List = () => {
             <h1 className="listSearchTitle">Search</h1>
             <div className="listSearchItem">
               <label>Destination</label>
-              <input placeholder={destination} type="text" />
+              <input placeholder={destination} type="text" className="searchInput" />
             </div>
             <div className="listSearchItem">
               <label>Check-in Date</label>
