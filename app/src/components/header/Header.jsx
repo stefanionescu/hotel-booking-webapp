@@ -1,29 +1,26 @@
-import "./header.css";
-
 import {
   faBed,
+  faCalendarDays,
   faCar,
+  faPerson,
   faPlane,
   faTaxi,
-  faPerson,
-  faPalette,
-  faCalendarDays,
-  faMagnifyingGlass
 } from "@fortawesome/free-solid-svg-icons";
-
-import { format } from "date-fns";
-import "react-date-range/dist/styles.css";
-import { useState, useContext } from "react";
-import { DateRange } from "react-date-range";
-import { useNavigate } from "react-router-dom";
-import "react-date-range/dist/theme/default.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { dispatch, SearchContext } from "../../context/SearchContext.js";
+import "./header.css";
+import { DateRange } from "react-date-range";
+import { useContext, useState } from "react";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
+import { SearchContext } from "../../context/SearchContext";
+import { AuthContext } from "../../context/AuthContext";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
-  const [openDate, setOpenDate]       = useState(false);
-  const [dates, setDates]             = useState([
+  const [openDate, setOpenDate] = useState(false);
+  const [dates, setDates] = useState([
     {
       startDate: new Date(),
       endDate: new Date(),
@@ -31,7 +28,7 @@ const Header = ({ type }) => {
     },
   ]);
   const [openOptions, setOpenOptions] = useState(false);
-  const [options, setOptions]         = useState({
+  const [options, setOptions] = useState({
     adult: 1,
     children: 0,
     room: 1,
@@ -39,6 +36,7 @@ const Header = ({ type }) => {
 
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
+
 
   const handleOption = (name, operation) => {
     setOptions((prev) => {
@@ -52,7 +50,7 @@ const Header = ({ type }) => {
   const { dispatch } = useContext(SearchContext);
 
   const handleSearch = () => {
-    dispatch({type: "NEW_SEARCH", payload: {destination, dates, options}});
+    dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
     navigate("/hotels", { state: { destination, dates, options } });
   };
 
@@ -96,7 +94,7 @@ const Header = ({ type }) => {
             </p>
             {!user && <button className="headerBtn">Sign in / Register</button>}
             <div className="headerSearch">
-              <div className="headerSearchItem">Whe
+              <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
                   type="text"

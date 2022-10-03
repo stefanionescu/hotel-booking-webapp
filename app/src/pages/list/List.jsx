@@ -5,7 +5,7 @@ import { format } from "date-fns";
 
 import { DateRange } from "react-date-range";
 import { useLocation } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import SearchItem from "../../components/searchItem/SearchItem";

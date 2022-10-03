@@ -9,8 +9,8 @@ import {
   faLocationDot
 } from "@fortawesome/free-solid-svg-icons";
 
-import { useNavigate } from "react-router-dom";
-import { useFetch } from "../../hooks/useFetch";
+import { useNavigate, useLocation } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";

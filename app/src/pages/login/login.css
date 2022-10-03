@@ -5,18 +5,18 @@
   justify-content: center;
 }
 
-.loginContainer {
+.lContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.loginInput {
+.lInput{
   height: 30px;
   padding: 10px;
 }
 
-.loginButton {
+.lButton {
   border: none;
   padding: 10px 20px;
   background-color: #0071c2;
@@ -26,7 +26,7 @@
   border-radius: 5px;
 }
 
-.loginButton:disabled {
+.lButton:disabled{
   background-color: #0071c28c;
   cursor: not-allowed;
 }

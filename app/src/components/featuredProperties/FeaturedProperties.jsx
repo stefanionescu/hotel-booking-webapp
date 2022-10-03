@@ -1,6 +1,6 @@
 import "./featuredProperties.css";
 
-import { useFetch } from "../../hooks/useFetch.js";
+import useFetch from "../../hooks/useFetch";
 
 const FeaturedProperties = () => {
     const { data, loading, error } =

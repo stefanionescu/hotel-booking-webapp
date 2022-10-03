@@ -2,10 +2,12 @@
 .env
 
 # api
+api/.env
 api/node_modules
 api/package-lock.json
 
 # app
+app/.env
 app/.pnp
 app/build
 app/.pnp.js
